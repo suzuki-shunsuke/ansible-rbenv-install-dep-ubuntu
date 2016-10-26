@@ -1,0 +1,7 @@
+---
+# tasks file for rbenv-install-dep-ubuntu
+- name: Install rbenv install dependencies.
+  apt:
+    name: "{{item}}"
+  with_items: "{{rbenv_install_deps}}"
+  become: "{{rbenv_install_dep_nonroot}}"

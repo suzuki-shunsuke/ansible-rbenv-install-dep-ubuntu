@@ -1,0 +1,16 @@
+---
+# vars file for rbenv-install-dep-ubuntu
+rbenv_install_dep_nonroot: "{{(ansible_env.HOME == '/root') | ternary('no', 'yes')}}"
+# https://github.com/rbenv/ruby-build/wiki#suggested-build-environment
+rbenv_install_deps:
+- autoconf
+- bison
+- build-essential
+- libssl-dev
+- libyaml-dev
+- libreadline6-dev
+- zlib1g-dev
+- libncurses5-dev
+- libffi-dev
+- libgdbm3
+- libgdbm-dev
